@@ -53,7 +53,7 @@ public class Rotate90 {
 	}
 
 	public static void rotateByNinetyToLeft(int[][] m) {
-	   // transpose(m);
+	    transpose(m);
 	    swapRows(m);
 	}
 

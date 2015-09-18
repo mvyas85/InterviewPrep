@@ -28,6 +28,8 @@ public class MatrixRow0 {
                 { 1, 1, 1, 1, 1 },
                 { 1, 0, 1, 1, 1 },
                 { 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1 },
                 { 1, 1, 1, 1, 1 }
             };
 	row0Matrix(m);
@@ -49,22 +51,17 @@ public class MatrixRow0 {
 		
 		for(int i=0;i<noRows;i++){
 			int bitwiseAndRow =1;
+
+			int bitwiseAndCol =1;
 			int j;
-			for(j=0;j<noCols;++j){
+			for(j=0;j<noCols;j++){
 				bitwiseAndRow = bitwiseAndRow & m[i][j] ;
+				bitwiseAndCol = bitwiseAndCol & m[i][j] ;
 			}
 			row[i] = bitwiseAndRow;
+			j--;
+			col[j] = bitwiseAndCol;
 		}
-		
-		for(int i=0;i<noCols;i++){
-			int bitwiseAndCol =1;
-			
-			for(int j=0;j<noRows;j++){
-				bitwiseAndCol = bitwiseAndCol & m[j][i] ;
-			}
-			col[i] = bitwiseAndCol;
-		}
-		
 		
 		for(int i=0;i<noRows;i++){
 			for(int j=0;j<noCols;j++){
