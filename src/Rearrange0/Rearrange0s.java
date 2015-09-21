@@ -27,7 +27,7 @@ System.out.println("After \n");
 				i++;
 			}
 			
-			while(j> i){
+			while(i<j){
 				
 				if(arr[j] != 0)
 					break;

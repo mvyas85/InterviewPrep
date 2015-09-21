@@ -28,6 +28,9 @@ public class removeDupLinkedList {
 		ll.add(new Node(6));
 		ll.add(new Node(6));
 		ll.add(new Node(6));
+		ll.add(new Node(1));
+		ll.add(new Node(1));
+		ll.add(new Node(1));
 		ll.add(new Node(6));
 		
 //		ll.remove(nn);

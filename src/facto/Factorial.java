@@ -26,6 +26,19 @@ public class Factorial {
 		}
 		System.out.println("Factorieal of "+x + " is = "+ans);
 	}
+	
+	public static int facto(int n)
+	{
+	int ans=n;
+	if (n == 0 || n ==1){
+		return 1;
+	}
+
+	ans = ans * facto(n-1);
+	return ans;
+
+	}
+	
 }
 /*
 public static void main(String args[]){

@@ -34,12 +34,21 @@ public class Armstrong {
 
 	}
 	
-	public static int raiseTo(int d,int x){
-		int ans=1;
-		for(int i=0;i<x;i++){
-			ans = ans * d;
+	public static int raiseTo(int x,int n){
+		if (n==0){
+			return 1;
 		}
-		return ans;
+		
+		if(n<0){
+			x = 1/x;
+			n = -n;
+		}
+		int ret = raiseTo(x,n/2);
+		ret = ret * ret;
+		
+		if(ret %2 != 0){
+			ret = ret * x;
+		}
+		return ret;
 	}
-
 }

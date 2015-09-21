@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class AnagramStrings {
 
 	public static void main(String[] args) {
-		String s1 = "helo";
+		String s1 = "hello";
 		String s2 = "hello";
 		System.out.println(isAnagram(s1, s2));
 
@@ -37,8 +37,8 @@ public class AnagramStrings {
 			}
 			
 		}
-		
-		return mapsAreEqual(map1,map2);
+		return map1.equals(map2);
+	//	return mapsAreEqual(map1,map2);
 	}
 
 	private static boolean mapsAreEqual(HashMap<Character, Integer> map1,
