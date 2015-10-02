@@ -39,3 +39,7 @@ public class ApowerB {
 	}
 }
 
+class anotherclass{
+	
+}
+

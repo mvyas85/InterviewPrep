@@ -15,6 +15,7 @@ public class NthToLastInLinkedList {
 		ll.add(new Node(5));
 		ll.add(new Node(6));
 		System.out.println(nthElement(ll, 2));
+		
 	}
 	
 
@@ -37,6 +38,7 @@ public class NthToLastInLinkedList {
 			p2 = p2.next;
 		}
 		return p1.data;
+		
 	}
 }
 
