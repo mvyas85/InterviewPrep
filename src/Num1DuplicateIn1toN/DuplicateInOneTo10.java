@@ -3,6 +3,7 @@
  */
 package Num1DuplicateIn1toN;
 
+import java.util.Arrays;
 import java.util.Hashtable;
 
 public class DuplicateInOneTo10 {
@@ -31,8 +32,22 @@ public class DuplicateInOneTo10 {
 //
 //		System.out.println(dupli+" is duplicate");
 		
-		System.out.println("Duplicate number is "+duplicateNum(arr,9));
+		System.out.println("Duplicate number is "+duplicateNum1(arr,9));
 	}
+	
+
+	public static int duplicateNum1(int[] arr,int n){
+		
+		Arrays.sort(arr);
+		
+		for(int i = 1;i<arr.length;i++){
+			if(arr[i-1] != i){
+				return arr[i-1];
+			}
+		}
+		return 0;
+	}
+	
 	
 	public static int duplicateNum(int[] arr,int n){
 		

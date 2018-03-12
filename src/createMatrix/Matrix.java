@@ -19,20 +19,46 @@ import java.util.Scanner;
 
 public class Matrix {
 	public static void main(String args[]){
-		Scanner in = new Scanner(System.in);
-		System.out.println("Enter value for x:");
-		int x = in.nextInt();
-		System.out.println("Enter value for y:");
-		int y = in.nextInt();
-		createMatrix(x,y);
+//		Scanner in = new Scanner(System.in);
+//		System.out.println("Enter value for x:");
+//		int x = in.nextInt();
+//		System.out.println("Enter value for y:");
+//		int y = in.nextInt();
+		createMatrix(3,4);
 	}
 
-	private static void createMatrix(int x, int y) {
+	private static void createMatrix(int rows, int cols) {
+		
+		int[][] matr = new int[rows][cols];
+		
+		for(int i =0;i<rows;i++){
+			for (int j =0;j<cols;j++){
+//				matr[i][j] = j;
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+//		printMatr(matr);
+	}
+	
+
+	private static void printMatr(int[][] mat) {
+		
+		for(int i =0;i<=mat.length;i++){
+			for (int j =0;j<=mat[0].length;j++){
+				System.out.println(mat[i][j]+ " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	private static void printMatrix(int x, int y) {
 		int j =0;
 		for(int i =0;i<=y;i++){
 			for (j =0;j<=x;j++){
 				if(i==0){
-					System.out.print(j+ "  ");
+					System.out.print(j+ " ");
 				}else if(j==0){
 					System.out.print(i+ "  ");
 				}else{

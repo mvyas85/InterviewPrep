@@ -3,7 +3,7 @@ package palindromeStr;
 public class palindromeStr {
 
 	public static void main(String args[]){
-		String test = "asdf";
+		String test = "ABCBA";
 		
 		
 		boolean ans = CheckPalindrome(test);

@@ -13,7 +13,6 @@ public class reverseNum {
 
 			num = num/10;
 		}
-		System.out.println("Reverse tring is "+revNum);
-		
+		System.out.println("Reverse tring is "+revNum);	
 	}
 }

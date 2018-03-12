@@ -51,7 +51,6 @@ public class MatrixRow0 {
 		
 		for(int i=0;i<noRows;i++){
 			int bitwiseAndRow =1;
-
 			int bitwiseAndCol =1;
 			int j;
 			for(j=0;j<noCols;j++){

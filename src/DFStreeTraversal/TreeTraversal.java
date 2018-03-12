@@ -16,7 +16,7 @@ import java.util.Deque;
  */
 
 //Depth First Pre Order Traversal- TREE B
-public class TreeTraversal {
+public class TreeTraversal {             
 	
 	public static void main(String args[]){
 
@@ -38,7 +38,6 @@ public class TreeTraversal {
 	
 	 public static void printPreorder(TreeNode root){
 		 printPreOrderRec(root);
-
 	 }
 
 	private static void printPreOrderRec(TreeNode currRoot) {

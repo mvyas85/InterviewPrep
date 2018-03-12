@@ -14,7 +14,9 @@ public class NthToLastInLinkedList {
 		ll.add(new Node(4));
 		ll.add(new Node(5));
 		ll.add(new Node(6));
-		System.out.println(nthElement(ll, 2));
+		
+		//search 3rd element from last in LL.
+		System.out.println(nthElement(ll, 3));
 		
 	}
 	
@@ -61,6 +63,9 @@ class LinkedList{
 class Node{
 	public int data;
 	public Node next;
-	public Node(int data){this.data = data;
-	this.next = null;}
+	
+	public Node(int data){
+		this.data = data;
+		this.next = null;
+		}
 }

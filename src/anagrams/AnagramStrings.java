@@ -3,16 +3,29 @@ package anagrams;
 import java.util.HashMap;
 import java.util.Iterator;
 
+/**
+ * 
+ * Check if two strings are Anagram or not
+ * 
+ * Example Listen : Silent/listin
+ * 
+ * @author vyasma1
+ *
+ */
 public class AnagramStrings {
 
 	public static void main(String[] args) {
-		String s1 = "hello";
-		String s2 = "hello";
-		System.out.println(isAnagram(s1, s2));
+		String s1 = "silent";
+		String s2 = "listin";
 
+		System.out.println(isAnagram(s1, s2));
 	}
 
 	public static boolean isAnagram(String str1, String str2){
+		if(str1.length() != str2.length()){
+			return false;
+		}
+		
 		HashMap<Character, Integer> map1 = new HashMap<Character, Integer>();
 		HashMap<Character, Integer> map2 = new HashMap<Character, Integer>();
 		
@@ -23,8 +36,7 @@ public class AnagramStrings {
 				map1.put(ch,map1.get(ch)+1);
 			}else{
 				map1.put(ch,1);
-			}
-			
+			}	
 		}
 		
 		for(int i=0;i<str2.length();i++){
@@ -40,6 +52,7 @@ public class AnagramStrings {
 		return map1.equals(map2);
 	//	return mapsAreEqual(map1,map2);
 	}
+
 
 	private static boolean mapsAreEqual(HashMap<Character, Integer> map1,
 			HashMap<Character, Integer> map2) {

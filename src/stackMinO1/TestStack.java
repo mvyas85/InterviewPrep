@@ -53,8 +53,6 @@ class SpecialStack extends Stack<Integer>{
             int minEle = (int) min.peek();
             if(newEle<minEle){
                 min.push(newEle);
-            }else {
-                min.push(minEle);
             }
             super.push(newEle);
         }

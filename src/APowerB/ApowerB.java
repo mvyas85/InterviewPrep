@@ -6,14 +6,14 @@ package APowerB;
  */
 import java.util.Scanner;
 
-//O(log(n)) complexity
+//O(log(n)) complexity                       
 public class ApowerB {
 
 	public static void main (String args[]){
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter value for x:");
 		int a = in.nextInt();
-		System.out.println("Enter value for y:");
+		System.out.println("Enter value for n:");
 		int b = in.nextInt();
 		
 		System.out.println(power(a,b));
@@ -25,7 +25,7 @@ public class ApowerB {
 		 }
 
 		 if(n<0){
-			 x = 1.0/x;
+			 x = 1.0/x;                      
 			 n = -n;
 		 }
 		  
@@ -37,9 +37,5 @@ public class ApowerB {
 		 }
 		 return ret;
 	}
-}
-
-class anotherclass{
-	
 }
 

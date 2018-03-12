@@ -14,23 +14,14 @@ public class Rotate90 {
 				         {41,42,43,44,45},
 				         {51,52,53,54,55}};
 
-		//transpose(image);
-		 //swapRows(image);
-		for (int i = 0; i < image.length; i++) {
-            for (int j = 0; j < image[i].length; j++) {
-            	System.out.print(image[i][j]+" ");
-            }
-            System.out.println();
-		}
+
+		printImg(image);
+
+		swapRows(image);
 		System.out.println();
-		rotateByNinetyToLeft(image);
-		for (int i = 0; i < image.length; i++) {
-            for (int j = 0; j < image[i].length; j++) {
-            	System.out.print(image[i][j]+" ");
-            }
-            System.out.println();
-		}
 		
+
+		printImg(image);
 	}
 	
 	 private static void transpose(int[][] m) {
@@ -42,7 +33,7 @@ public class Rotate90 {
 	                m[j][i] = x;
 	            }
 	        }
-	    }
+	}
 	 
 	public static void swapRows(int[][] m) {
 	    for (int  i = 0, k = m.length - 1; i < k; i++, k--) {
@@ -60,5 +51,14 @@ public class Rotate90 {
 	public static void rotateByNinetyToRight(int[][] m) {
 	    swapRows(m);
 	    transpose(m);
+	}
+	
+	public static void printImg(int[][] image){
+		for (int i = 0; i < image.length; i++) {
+            for (int j = 0; j < image[i].length; j++) {
+            	System.out.print(image[i][j]+" ");
+            }
+            System.out.println();
+		}
 	}
 }

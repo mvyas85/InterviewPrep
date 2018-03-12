@@ -9,12 +9,12 @@ public class ReplaceSpaces {
 		String str = "this is my str";
 		
 		System.out.println(replaceSpaces(str));
-		System.out.println(replaceSpaces2(str));
+		System.out.println(replaceSpaces(str));
 
 	}
 
 	public static String replaceSpaces(String str){
-			return str.replaceAll(" ", "%20");
+			return str.replaceAll(" ", "%20"); 
 		
 	}
 	
@@ -25,8 +25,22 @@ public class ReplaceSpaces {
 		for(int i =0;i<words.length;i++){
 			result.append(words[i]);
 			if(i != words.length-1)
-				result.append("20%");
+				result.append("%20");
 		}
 		return result.toString();
+	}
+	//Without using function
+	public static String replaceSpaces3(String str){
+		
+		StringBuilder str3 = new StringBuilder();
+
+		for(int i =0;i<str.length();i++){
+			if(str.charAt(i)!= ' '){
+				str3.append(str.charAt(i));
+			}else{
+				str3.append("%20");
+			}
+		}
+		return str3.toString();
 	}
 }

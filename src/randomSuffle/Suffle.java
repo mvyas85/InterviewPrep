@@ -5,8 +5,8 @@ import java.util.Random;
 public class Suffle {
 	public static void main(String args[]){
 		int[] myArr = {1,2,3,4,5,6,7,8,9,0};
+		char[] arr = {'a','b'};
 		
-
 		System.out.println("Before suffle :");
 		for(int i=0;i<myArr.length;i++){
 			System.out.print(myArr[i]+" ");
@@ -17,14 +17,14 @@ public class Suffle {
 		for(int i=0;i<myArr.length;i++){
 			System.out.print(myArr[i]+" ");
 		}
-		
 	}
 	
 	public static void suffleArr(int[] arr){
 		Random rand = new Random();
 		int len = arr.length;
-		for(int i =0;i<arr.length;i++){
-			swap(arr, i,rand.nextInt(len - i + 1));
+		for(int i =0;i<len;i++){
+			swap(arr, i,rand.nextInt(len));
+//			swap(arr, i,rand.nextInt(len - i ));
 		}
 		
 	}

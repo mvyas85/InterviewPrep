@@ -5,9 +5,6 @@ package facto;
  * 2 ! = 1 * 2 = 2
  * 3 ! = 1*2*3 = 6
  */
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class Factorial {
 	public static void main(String args[]){
@@ -19,26 +16,24 @@ public class Factorial {
 			System.out.println("1");
 			return ;
 		}
-		int ans=1;
+		int ans = 1;
 		
 		for(int i=1;i<=x;i++){
 			ans *= i;
 		}
-		System.out.println("Factorieal of "+x + " is = "+ans);
+		System.out.println("Factorieal of "+ x + " is = "+ans);
 	}
 	
 	public static int facto(int n)
 	{
-	int ans=n;
-	if (n == 0 || n ==1){
-		return 1;
-	}
-
-	ans = ans * facto(n-1);
-	return ans;
-
-	}
+		int ans=n;
+		if (n == 0 || n ==1){
+			return 1;
+		}
 	
+		ans = ans * facto(n-1);
+		return ans;
+	}
 }
 /*
 public static void main(String args[]){

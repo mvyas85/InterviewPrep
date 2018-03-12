@@ -4,10 +4,14 @@ import java.util.HashMap;
 
 public class Practice {
 	public static void main(String args[]){
-		String str ="jj";
+		String str ="ABCDA";
 		
 		//checkUniqueCharStr(str);
-		removeDuplicateFromString(str.toCharArray());
+//		removeDuplicateFromString(str.toCharArray());
+		
+
+//		printStr(str.toCharArray());
+		remDuplicateFormString(str.toCharArray());
 	}
 	public static void checkUniqueCharStr(String str){
 		HashMap<Character,Integer> myMap = new HashMap<Character,Integer>();
@@ -68,11 +72,36 @@ public class Practice {
 
 	}
 	
-	private static void printStr(char[] str){
-		int j = 0;
-		while(str[j]!= '\0'){
-			System.out.print(str[j]);
+	
+	
+	
+	
+	public static void remDuplicateFormString(char[] arr){
+
+		printStr(arr);
+		for(int i =0;i<arr.length-2;i++){
+			for(int j=i+1;j<arr.length;j++){
+				if(arr[i] == arr[j]){
+					removeCharacterAt(arr,j);
+				}
+			}
+		}
+	}
+	private static void removeCharacterAt(char[] arr, int j) {
+		while((j+1)<arr.length-1){
+			arr[j] = arr[j+1];
 			j++;
+		}
+		arr[j]='\0';
+		
+		System.out.println();
+		printStr(arr);
+	}
+	
+	
+	private static void printStr(char[] str){
+		for(int i=0;i<str.length;i++){
+			System.out.print(str[i]);
 		}
 	}
 }

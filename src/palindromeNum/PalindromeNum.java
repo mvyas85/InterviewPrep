@@ -2,7 +2,7 @@ package palindromeNum;
 
 public class PalindromeNum {
 	public static void main(String args[]){
-		int num = 5644765;
+		int num = 564465;
 		isNumPalindrome(num);
 	}
 	public static void isNumPalindrome(int x){

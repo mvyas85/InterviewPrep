@@ -1,5 +1,6 @@
 package removeDuplicatesLL;
 
+import java.util.HashSet;
 import java.util.Hashtable;
 
  /* Write code to remove duplicates from an unsorted linked list FOLLOW UP
@@ -44,24 +45,46 @@ public class removeDupLinkedList {
 		
 		System.out.println("Without Buffer");
 		ll.printLL();
+//		deleteDups1(ll.head);
 		deleteDupsWithoutBuffer(ll,ll.head);
 		System.out.println();
 		ll.printLL();
 	}
 	
-
+	public static void deleteDups1 (Node n){
+		 HashSet<Integer> set = new HashSet<Integer>();
+		 Node previous = null;
+		  while(n!=null){
+		      if(set.add(Integer.valueOf(n.data))){
+			      previous = n;
+		      }else{
+		    	  previous.next = n.next ;
+		      }
+		      n = n.next;
+		  }
+	}
+	
+	public static void printLL(Node node) {
+		Node runner = node;
+		while(runner != null){
+			System.out.print(runner.data+" ");
+			runner = runner.next;
+		}
+		
+	}
 	public static void deleteDups (Node n){
-		 Hashtable table = new Hashtable();
+		 Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
 		 Node previous = null;
 		  while(n!=null){
 		      if(table.containsKey(n.data)){
-		          previous.next = n.next;
+		          previous = n.next;
 		      } else {
 		          table.put(n.data, true);
 		          previous = n;
 		      }
 		      n = n.next;
 		  }
+		  printLL(n);
 		}
 	
 	public static void deleteDupsWithoutBuffer (LinkedList ll , Node head){
@@ -73,9 +96,6 @@ public class removeDupLinkedList {
 				p2 = p2.next;
 				if(p1.data == p2.data){
 					ll.remove(p2);
-					if(p2.next == null){
-						break;
-					}
 				}
 			}
 
@@ -83,11 +103,8 @@ public class removeDupLinkedList {
 				break;
 			}
 			p1 = p1.next;
-			
 		}
-	}
-	
-	
+	}	
 }
 
 class LinkedList{

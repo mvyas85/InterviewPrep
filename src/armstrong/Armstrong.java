@@ -1,9 +1,13 @@
 /*
+ * 
+ * Check if string is argmstrong or not
+ * 
+ * Example:
  * 371 = 3^3 + 7^3 + 1^3
  * 1^4 + 6^4 + 3^4 + 4^4 = 1634
  * 1^3 + 5^3 + 3^3 = 153
  * 1741725 = 1^7 + 7^7 + 4^7 + 1^7 + 7^7 + 2^7 +5^7
- * 8208 = 8^4 + 2^4 +0^4 + 8^4
+ * 8208 = 8^4 + 2^4 +0^4 + 8 ^4
  * 
  */
 package armstrong;
@@ -20,9 +24,10 @@ public class Armstrong {
 		x = sc.nextInt();
 		x1 = x;
 		int digits = new Integer(x).toString().length();
+		
 		while (x>0){
 			d = x%10;
-			sum = sum +raiseTo(d,digits);
+			sum = (int) (sum +Math.pow(d,digits));
 			x = x/10;
 		}
 		
@@ -33,6 +38,12 @@ public class Armstrong {
 		}
 
 	}
+	
+	
+	
+	
+	
+	
 	
 	public static int raiseTo(int x,int n){
 		if (n==0){
