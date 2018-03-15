@@ -17,16 +17,15 @@ public class StringHasUniqueChars {
 		//System.out.println(useArraysBinarySearch(str,"nisha"));
 	}
 	public static boolean hasUniqueChars(String str){
-		int len = str.length();
+
 		Set<Character> myset = new HashSet<Character>();
 		char[] chArr = str.toCharArray();
 		for(char ch : chArr){
-			myset.add(ch);
+			if(!myset.add(ch)){
+				return false;
+			}
 		}
-		if(len == myset.size()){
-			return true;
-		}
-		return false;
+		return true;
 	}
 
 	//Not using any additional data structure

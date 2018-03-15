@@ -11,8 +11,7 @@ public class StackUsingQueues {
     public int pop() {
         if (q1.peek() == null) {
             System.out.println("The stack is empty, nothing to return");
-            int i = -1;
-            return i;
+            return -1;
         } else {
             int pop = q1.remove();
             return pop;

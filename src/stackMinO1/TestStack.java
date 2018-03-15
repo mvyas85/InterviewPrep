@@ -17,6 +17,7 @@ public class TestStack{
         myStack.push(5);
         myStack.push(0);
         myStack.push(4);
+        myStack.push(0);
         
        System.out.println("Min="+myStack.getMin());
        System.out.println(myStack.pop());//4
@@ -26,13 +27,17 @@ public class TestStack{
        
        System.out.println("Min="+myStack.getMin());
        
-       System.out.println( myStack.pop());
+       System.out.println( myStack.pop());//5
        
        System.out.println( "Min="+ myStack.getMin());
-       System.out.println( myStack.pop());
+       System.out.println( myStack.pop());//1
        
        System.out.println(  "Min="+myStack.getMin());
-        
+
+       System.out.println( myStack.pop());//1
+       System.out.println(  "Min="+myStack.getMin());
+
+       
     }
 }
 
@@ -46,21 +51,22 @@ class SpecialStack extends Stack<Integer>{
     
     public void push(int newEle){
         if(isEmpty()){
-            super.push(newEle);
             min.push(newEle);
         }
         else{
             int minEle = (int) min.peek();
-            if(newEle<minEle){
+            if(newEle<=minEle){
                 min.push(newEle);
             }
-            super.push(newEle);
         }
+        super.push(newEle);
     }
-    public Integer pop(){;
-        min.pop();
-        return super.pop();
-        
+    public Integer pop(){
+    	int ele = super.pop();
+    	if(ele == min.peek()){
+    		min.pop();
+    	}
+        return ele;
     }
     public int getMin(){
     	if(min.isEmpty())

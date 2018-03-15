@@ -16,7 +16,7 @@ public class ApowerB {
 		System.out.println("Enter value for n:");
 		int b = in.nextInt();
 		
-		System.out.println(power(a,b));
+		System.out.println(power1(a,b));
 	}
 	
 	public static double power(double x, int n){
@@ -34,6 +34,21 @@ public class ApowerB {
 		 
 		 if(n%2!=0){
 		   ret = ret * x;
+		 }
+		 return ret;
+	}
+	
+
+	public static double power1(double x, int n){
+		 if(n==0){
+			  return 1;
+		 }
+
+		
+		 int ret = 1;
+		 
+		 for(int i =0;i<n;i++){
+			 ret*= x;
 		 }
 		 return ret;
 	}

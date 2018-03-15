@@ -1,4 +1,7 @@
 package steppingNumbers;
+
+import java.util.ArrayList;
+
 /**
  * 
  * 	
@@ -20,5 +23,30 @@ Return the numbers in sorted order.
  *
  */
 public class SteppingNums {
+	
+	
+	public static void main(String args[]){
+		System.out.println(getSteppingNums(1,200));
+	}
+	
+	public static ArrayList<Integer> getSteppingNums(int n,int m){
+		 ArrayList<Integer> result = new ArrayList<Integer>();
 
+		for(int i = n;i<=m;i++){
+			boolean flag = true;
+			String numStr = Integer.toString(i);
+			int len = numStr.length();
+			
+			for(int j = 1;j<len;j++){
+				if(Math.abs((numStr.charAt(j-1)-'0') - (numStr.charAt(j)-'0') ) != 1){
+					flag = false;
+					break;
+				}
+			}
+			if(flag){
+				result.add(i);
+			}
+		}
+		return result;
+	} 
 }
