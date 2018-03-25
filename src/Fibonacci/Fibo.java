@@ -6,6 +6,8 @@
  */
 package Fibonacci;
 
+import java.util.Collections;
+
 public class Fibo {
 	public static void main(String args[]){
 		PrintFiboTill(100);
@@ -35,8 +37,10 @@ public class Fibo {
 			System.out.print(sum + " ");
 			
 		}
+		Collections.sort(list);
 	}
 	
+	//O(2^n)
 	public static long fib(int n) {
         if (n <= 1) return n;
         else return fib(n-1) + fib(n-2);

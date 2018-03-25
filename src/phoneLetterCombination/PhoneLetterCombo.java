@@ -17,13 +17,13 @@ public class PhoneLetterCombo {
 	        ArrayList<String> temp = new ArrayList<String>();
 	        result.add("");
 
-	        for(int i = 0; i < digits.length(); i++) {
-	            String letters = map.get(digits.charAt(i));
+	        for(char ch : digits.toCharArray()) {
+	            String letters = map.get(ch);
 	            if (letters.length() == 0)
 	                continue;
 	            for(String str : result) {
-	                for(int j = 0; j < letters.length(); j++)
-	                    temp.add(str + letters.charAt(j));
+	                for(char aletter : letters.toCharArray())
+	                    temp.add(str + aletter);
 	            }
 	            result = temp;
 	            temp = new ArrayList<String>();

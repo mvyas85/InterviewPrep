@@ -32,7 +32,7 @@ public class MatrixRow0 {
                 { 1, 1, 1, 1, 1 },
                 { 1, 1, 1, 1, 1 }
             };
-	row0Matrix(m);
+	row0Matrix1(m);
 	
 	System.out.println("Prniting  matrix:");
 	for(int i=0;i<m.length;i++){
@@ -43,6 +43,44 @@ public class MatrixRow0 {
 	}
 
 	}
+	
+	public static void row0Matrix1(int[][] m){
+		if(m.length == 1){ return;}
+		int[] colM = new int[m.length];
+		int[] rowM = new int[m[0].length];
+		
+		for(int i=0;i<rowM.length;i++){
+			rowM[i] = 1;
+		}
+		for(int i=0;i<colM.length;i++){
+			colM[i] = 1;
+		}
+		for(int i=0;i<m.length;i++){
+			for(int j = 0;j<m[i].length;j++){
+				if(m[i][j]==0){
+					rowM[j] = 0;
+					colM[i] = 0;
+				}
+			}
+		}
+
+		for(int i=0;i<colM.length;i++){
+			for(int j = 0;j<rowM.length;j++){
+				m[i][j] = colM[i]*rowM[j];
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void row0Matrix(int[][] m){
 		int noRows = m.length;
 		int noCols = m[0].length;

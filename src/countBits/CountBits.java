@@ -20,7 +20,7 @@ Note that since Java does not have unsigned int, use long for Java
 public class CountBits {
 
 	public static void main(String args[]){
-		System.out.println(countBits(15));
+		System.out.println(countBits2(15));
 	}
 	public static int countBits(long a){
 		
@@ -31,5 +31,9 @@ public class CountBits {
 			a = a >> 1;
 		}
 		return count;
+	}
+	public static int countBits2(long a){
+		
+		return Integer.bitCount((int)a);
 	}
 }
