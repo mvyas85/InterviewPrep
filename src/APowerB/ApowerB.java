@@ -19,6 +19,7 @@ public class ApowerB {
 		System.out.println(power1(a,b));
 	}
 	
+	//recursive
 	public static double power(double x, int n){
 		 if(n==0){
 			  return 1;

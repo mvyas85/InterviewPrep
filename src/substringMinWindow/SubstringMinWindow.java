@@ -17,9 +17,11 @@ If there are multiple such windows, you are guaranteed that there will always be
 public class SubstringMinWindow {
 
 	public static void main(String args[]) {
-		String S = "ADBECFDEBAFC";
+		String S = "AGBDECBFA";
+//		String S = "ADBECFDEBAFC";
 		String T = "ABC";
 
+//		System.out.println("0123456789".substring(1, 5));
 		System.out.println(minWindow(S, T));
 	}
 

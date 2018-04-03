@@ -29,8 +29,8 @@ Explanation :
 public class FBBlulb {
 	
 	public static void main(String args[]){
-		List<Integer> arr = Arrays.asList(1,0,1,0);
-		System.out.println(bulbs1(arr));
+		List<Integer> arr = Arrays.asList(0,1,0,1);
+		System.out.println(bulbs(arr));
 	}
 	  public static int bulbs(List<Integer> a) {
 	        int state = 0;

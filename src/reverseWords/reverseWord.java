@@ -5,7 +5,6 @@ public class reverseWord {
 		String str = "Hello World how are you";
 		StringBuilder  rev= new StringBuilder("");
 		
-		str.index
 		String[] splitStr = str.split(" ");
 			
 		int len = splitStr.length;

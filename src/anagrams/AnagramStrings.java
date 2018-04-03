@@ -7,7 +7,7 @@ import java.util.Iterator;
  * 
  * Check if two strings are Anagram or not
  * 
- * Example Listen : Silent/listin
+ * Example Listen : Silent/listen
  * 
  * @author vyasma1
  *
@@ -16,7 +16,7 @@ public class AnagramStrings {
 
 	public static void main(String[] args) {
 		String s1 = "silent";
-		String s2 = "listin";
+		String s2 = "listen";
 
 		System.out.println(isAnagram(s1, s2));
 	}
@@ -50,13 +50,15 @@ public class AnagramStrings {
 			
 		}
 		return map1.equals(map2);
-	//	return mapsAreEqual(map1,map2);
+//		return mapsAreEqual(map1,map2);
 	}
 
 
 	private static boolean mapsAreEqual(HashMap<Character, Integer> map1,
 			HashMap<Character, Integer> map2) {
 		for(char ch : map1.keySet()){
+
+			System.out.println("Checking :"+ch);
 			
 			if(!map2.containsKey(ch)){
 				return false;

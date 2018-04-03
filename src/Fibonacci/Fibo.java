@@ -37,7 +37,6 @@ public class Fibo {
 			System.out.print(sum + " ");
 			
 		}
-		Collections.sort(list);
 	}
 	
 	//O(2^n)

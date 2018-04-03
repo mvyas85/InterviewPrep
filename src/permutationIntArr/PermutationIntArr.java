@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PermutationIntArr {
 
 	public static void main(String args[]){
-		int[] arr = new int[]{1,15,7,9};
+		int[] arr = new int[]{1,3,3};
 		
 		permutation(arr,0,arr.length-1);
 	}

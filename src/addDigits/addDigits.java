@@ -2,13 +2,21 @@ package addDigits;
 public class addDigits {
 
 	public static void main(String args[]){
-		System.out.println(addDigits(38));
+		System.out.println(addDigits2(139));
 	}
-    public static int addDigits(int num) {
-        while(num<=10){
-            num = num/10+ num%10;
+    public static int addDigits2(int num) {
+    	int ans = 0;
+        String numStr = num + "";
+        while (numStr.length() != 1){
+        	ans =0 ;
+	        while(num>0){
+	        	ans += num%10;
+	            num = num/10;
+	        }
+	        numStr = ans + "";
+	        num = ans;
         }
-        return num;
+        return ans;
     }
     public static int addDigits1(int num) {
         String numStr = num + "";

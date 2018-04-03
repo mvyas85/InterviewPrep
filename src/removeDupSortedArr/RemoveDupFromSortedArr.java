@@ -17,7 +17,7 @@ public class RemoveDupFromSortedArr {
         
         int len = nums.length-1;
 
-        ArrayList<Integer> al = new ArrayList<Integer>(){{add(rightIndex);add(leftIndex);add(topIndex);add(bototmIndex);}} ;
+//        ArrayList<Integer> al = new ArrayList<Integer>(){{add(rightIndex);add(leftIndex);add(topIndex);add(bototmIndex);}} ;
         
         for(int i=0,j=i+1;j<len;){
             if(nums[i]==nums[j]){
@@ -30,7 +30,6 @@ public class RemoveDupFromSortedArr {
             }
         }
         
-        Arrays.
         Arrays.sort(nums,0,len);
         
         return len;
