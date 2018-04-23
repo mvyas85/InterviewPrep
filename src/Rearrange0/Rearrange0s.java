@@ -40,7 +40,7 @@ public class Rearrange0s {
 	        nums[i] = 0;
 	    }
 	}
-	
+	// 
 	public static void reArrange(int[] nums){
         int start = 0;
         int end = nums.length-1;

@@ -1,13 +1,13 @@
-package findIandJwithK;
+package arr2Sum;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 /**
  * 
-Given an array A of integers and another non negative integer k, find if there exists 2 indices i and j such that A[i] - A[j] = k, i != j.
+Given an array A of integers and another non negative integer k, 
+find if there exists 2 indices i and j such that A[i] - A[j] = k, i != j.
 
 Example :
 

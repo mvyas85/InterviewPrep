@@ -1,4 +1,4 @@
-/*
+/**
  * 
  * Check if string is argmstrong or not
  * 

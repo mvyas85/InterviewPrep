@@ -14,8 +14,9 @@ package createMatrix;
  * 4  4  8  12  
  * 
  * 
+x , y
+ * 
  */
-import java.util.Scanner;
 
 public class Matrix {
 	public static void main(String args[]){

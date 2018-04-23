@@ -1,9 +1,9 @@
 package APowerB;
-/*
+/**
  * 3) Write a function that takes in two integers (a and b) and returns a^b. You cannot use any 
  * exponents or predefined language functions other than basic arithmetic (addition, subtraction, 
  * multiplication, division). Comment on the complexity of your solution.
- */
+ **/
 import java.util.Scanner;
 
 //O(log(n)) complexity                       
@@ -44,14 +44,12 @@ public class ApowerB {
 		 if(n==0){
 			  return 1;
 		 }
-
-		
-		 int ret = 1;
+		 int ans = 1;
 		 
 		 for(int i =0;i<n;i++){
-			 ret*= x;
+			 ans*= x;
 		 }
-		 return ret;
+		 return ans;
 	}
 }
 

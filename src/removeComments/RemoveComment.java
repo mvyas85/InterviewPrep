@@ -21,6 +21,15 @@ import java.io.IOException;
 		int b = 2; 
 
 		====
+		
+		
+		BufferedReader br = new BufferedReader(new FileReader("myfile.txt"));
+		
+		String line = br.readLine();
+		
+		while(line != null){
+			
+		}
  */
 public class RemoveComment {
 	static String eol = System.lineSeparator();
@@ -41,7 +50,7 @@ public class RemoveComment {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 
 		System.out.println(sb.toString());
 		System.out.println("Output file::\n"+removeComments(sb.toString()));

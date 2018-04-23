@@ -10,6 +10,8 @@ import java.util.Iterator;
  * Example Listen : Silent/listen
  * 
  * @author vyasma1
+ * 
+ * One more possible solution is sort both strings and compare
  *
  */
 public class AnagramStrings {

@@ -5,21 +5,23 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] find the minimum number of conference rooms required.
- * @author vyasma1
+ * 	253	Meeting Rooms II    
+
+ * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] 
+ * find the minimum number of conference rooms required.
  *
  */
 public class MeetingRoomII {
 
 	public static void main(String args[]){
 		
-		Intervals i1 = new Intervals(1,6);
 		Intervals i2 = new Intervals(1,2);
+		Intervals i1 = new Intervals(1,6);
 		Intervals i3 = new Intervals(2,3);
-		Intervals i4 = new Intervals(3,4);
+//		Intervals i4 = new Intervals(3,4);
 		Intervals i5 = new Intervals(2,4);
 		
-		Intervals[] all = {i1,i2,i3,i4,i5};
+		Intervals[] all = {i1,i2,i3,i5};
 		
 		int i = requiredConfRooms(all);
 		System.out.println(i);
@@ -45,7 +47,7 @@ public class MeetingRoomII {
 		
 		int count =1;
 		PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
-		queue.offer(intervals[0].stop);
+		queue.offer(intervals[0].end);
 		
 		for(int i=1;i<intervals.length;i++){
 			if(intervals[i].start<queue.peek()){
@@ -53,7 +55,7 @@ public class MeetingRoomII {
 			}else{
 				queue.poll();
 			}
-			queue.offer(intervals[i].stop);
+			queue.offer(intervals[i].end);
 		}
 		
 		return count;
@@ -68,15 +70,15 @@ public class MeetingRoomII {
 
 class Intervals{
 	public int start;
-	public int stop;
+	public int end;
 	Intervals(int start,int stop){
 		this.start = start;
-		this.stop = stop;
+		this.end = stop;
 	}
 	
 	@Override
 	public String toString() {
-		String str = "["+start+","+stop+"]";
+		String str = "["+start+","+end+"]";
 		return str;
 	}
 }

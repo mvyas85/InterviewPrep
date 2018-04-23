@@ -6,28 +6,25 @@ public class PrintPrimes {
 
 	public static void main(String args[]){
 //		printPrimes(499979);
-		System.out.println(countPrimes(499979));
+		System.out.println(countPrimes(7));
 	}
 	
 
     public static int countPrimes(int n) {
     	
     if(n<=2){return 0;}
-    int count = 0;
-    boolean[] notPrime = new boolean[n];
-    for( int i=2;i<n;i++){
-        if(notPrime[i] ==  false){
-        	for(int j=2;i*j<n;j++){
+	    int count = 0;
+	    boolean[] notPrime = new boolean[n];
+	    
+	    for( int i=2;i<n;i++){
+	        if(notPrime[i] ==  false){
         		count++;
-        		notPrime[i] = true;
-        	}
-        }
-    }
-    
-    for(boolean b: notPrime){
-        if(!b){ count++;}
-    }
-    return count;
+	        	for(int j=2;i*j<n;j++){
+	        		notPrime[i*j] = true;
+	        	}
+	        }
+	    }
+	    return count;
     }
 }
 	

@@ -1,7 +1,8 @@
 package maxValFromStringNum;
 /**
  * 
-Given a string of numbers, the task is to find the maximum value from the string, you can add a ‘+’ or ‘*’ sign between any two numbers.
+Given a string of numbers, the task is to find the maximum value from the string, 
+you can add a ‘+’ or ‘*’ sign between any two numbers.
 Note: Add sign between two numbers on the basis of numbers not on the value calculated till that number.
 For eg: n = 5120    
 (((5  + 1 )  + 2 )  + 0 ) = 8 is right.

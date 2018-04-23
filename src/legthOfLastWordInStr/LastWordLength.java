@@ -1,6 +1,9 @@
                                                                                                                                                                                                                 package legthOfLastWordInStr;
 /**
- * Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
+ * 
+ * 58 Length of Last Word    
+ * Given a string s consists of upper/lower-case alphabets and 
+ * empty space characters ' ', return the length of last word in the string.
 
 If the last word does not exist, return 0.
 
@@ -17,7 +20,7 @@ Please make sure you try to solve this problem without using library functions. 
  */
 public class LastWordLength {
 	public static void main(String args[]){
-		int len = lastWordLen1("Somestrin");
+		int len = lastWordLen("  ");
 		System.out.println(len);
 	}
 	
@@ -29,7 +32,7 @@ public class LastWordLength {
 		int last = n;
 		int first = n ;
 		int i = n - 1; 
-		while(i>=0 && str.charAt(i)== ' ') i--;
+		while(i>=0 && str.charAt(i)== ' '){ i--;}
 		
 		last = i;
 		

@@ -1,4 +1,4 @@
-package FBFinB;
+package arr2Sum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +8,28 @@ import java.util.List;
 
 /*
  * Given -5,4,7 find if any two number in array sum up to target value
+ * 
+ * 
+ * 
+ * o(n)
+public boolean sumTarget(int[] arr,int target){
+	Arrays.sort(arr); //nlog n
+	
+	
+	int l = 0;
+	int r = arr.length -1;
+	
+	while(l<r){
+		if(arr[l]+arr[r] == target){
+			return true;
+		}else if(arr[l]+arr[r] > target) {
+			r--;
+		}else{
+			l++;
+		}
+	}
+	return false;
+Array
  */
 public class FindSumInEquation {
 	
@@ -28,6 +50,7 @@ public class FindSumInEquation {
 	}
 	
 
+	//O(n)
 	public static boolean getSum3(List<Integer> arr, int target){
 	
 		HashSet<Integer> set = new HashSet<>();
@@ -54,7 +77,7 @@ public class FindSumInEquation {
 	}
 
 	
-	//o(n) solution
+	//o(log n ) solution
 	
 	public static boolean getSum2(List<Integer> arr, int target){
 		Collections.sort(arr);

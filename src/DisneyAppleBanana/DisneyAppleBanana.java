@@ -5,8 +5,8 @@ import java.util.Iterator;
 
 public class DisneyAppleBanana {
 	public static void main (String args[]){
-		String appleStr = "apple";//aple
-		String bananaStr = "banana"; //ban
+		String appleStr = "silent";//aple
+		String bananaStr = "listen"; //ban
 		
 		HashSet<Character> hs1 =new HashSet<Character>();
 		HashSet<Character> hs2 =new HashSet<Character>();
@@ -21,6 +21,7 @@ public class DisneyAppleBanana {
 			hs2.add(c);
 		}
 
+		System.out.println(hs1.equals(hs2));
 		Iterator<Character> iter1 = hs1.iterator();
 		
 		while (iter1.hasNext()) {

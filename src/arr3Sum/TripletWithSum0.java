@@ -1,5 +1,5 @@
-package TripletWithSum0;
-
+package arr3Sum;
+//TripletWithSum0
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

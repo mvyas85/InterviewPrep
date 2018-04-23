@@ -1,4 +1,4 @@
-package treeSum;
+package arr3Sum;
 
 import java.util.ArrayList;
 import java.util.Collections;

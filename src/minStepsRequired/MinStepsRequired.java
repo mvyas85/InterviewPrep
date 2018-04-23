@@ -7,7 +7,8 @@ import java.util.Stack;
 
 Copy All: You can copy all the characters present on the notepad (partial copy is not allowed).
 Paste: You can paste the characters which are copied last time.
-Given a number n. You have to get exactly n 'A' on the notepad by performing the minimum number of steps permitted. Output the minimum number of steps to get n 'A'.
+Given a number n. You have to get exactly n 'A' on the notepad by performing the minimum number of steps permitted.
+Output the minimum number of steps to get n 'A'.
 
 Example 1:
 Input: 3
@@ -32,7 +33,7 @@ public class MinStepsRequired {
         if(n<=1){return 0;}
         if(n==2){return 2;}
         
-        //1. if(n%stack.size()) ? Copy : paste 
+        //1. if(n%stack.size()==0) ? Copy : paste 
         Stack<Character> stack = new Stack<Character>();
         stack.push('A');
         

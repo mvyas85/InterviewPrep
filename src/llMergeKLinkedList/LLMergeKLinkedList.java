@@ -1,5 +1,13 @@
 package llMergeKLinkedList;
+/**
+ * 
+ * 
+ * 23. Merge k Sorted Lists
 
+Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+ * @author vyasma1
+ *
+ */
 public class LLMergeKLinkedList {
 
 	public static void main(String args[]) {
@@ -18,8 +26,42 @@ public class LLMergeKLinkedList {
 		System.out.print("null");
 
 	}
-
 	public static ListNode mergeKLists(ListNode[] lists) {
+
+		if (lists.length == 0) {
+			return null;
+		}
+		if (lists.length == 1) {
+			return lists[0];
+		}
+		
+		return partition(lists,0,lists.length-1);
+	}
+	
+	public static ListNode partition(ListNode[] lists, int l,int r){
+		if(l == r){return lists[l];} 
+			
+		while(l<r){
+			int m = l+(r-l)/2;
+			
+			ListNode n1 = partition(lists,l,m);
+			ListNode n2 = partition(lists,m+1,r);
+			return mergeTwoLL(n1,n2);
+			
+			
+		}
+		
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+	//This is right approach but dosent work as it -
+	//Timeout use it so that divide and conquer 
+	public static ListNode mergeKLists1(ListNode[] lists) {
 
 		if (lists.length == 0) {
 			return null;

@@ -1,8 +1,8 @@
-package arr2EleAddtoX;
+package arr2Sum;
 /**
  *  You have an array of n elements, and a sum. Check if any 2 
  *  elements in the array sum to the given sum.
-Expected time complexity O(n).
+ *  Expected time complexity O(n).
  */
 import java.util.Arrays;
 import java.util.Collections;
@@ -19,9 +19,10 @@ public class Arr {
 		System.out.println(findK(arr,37));
 	}
 	
+	//O(n log n)
 	public static boolean findK(final List<Integer> arr,int k){
 
-		Collections.sort(arr);
+		Collections.sort(arr); //O(nlonn)
 		
 		for(int a: arr){
 			System.out.print(a+", ");
